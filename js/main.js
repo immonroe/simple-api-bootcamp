@@ -6,6 +6,11 @@ const url = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religio
 
 button.addEventListener('click', () => {
 
+    document.querySelector('.joke').innerText = ''
+    document.querySelector('.setup').innerText = ''
+    document.querySelector('.delivery').innerText = ''
+
+
     fetch(url) //Make sure to include to search for date
     .then(res => res.json()) // parse response as JSON
     .then(data => {
